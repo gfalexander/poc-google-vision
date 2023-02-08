@@ -19,14 +19,23 @@ O Cloud Vision é uma ferramenta OCR desenvolvida pela Google que utiliza a [Ver
 ## Configurando GVision
 ### Plataforma
 Inicialmente na plataforma é necessário criar um projeto, os projetos possuem acesso a todas os recursos da google que por padrão vêm desativados, nesse caso iremos habilitar o Google Vision AI. Antes disso é necessário atribuir uma conta de faturamento para o projeto, assim que este passo for concluído podemos habilitar o serviço.
+
 Após ser habilitado será necessária a criação de uma conta de serviço para autenticação do cliente que irá utiliza-lo, para âmbito de testes iremos utilizar o nível de proprietário, mas futuramente isso deverá ser revisado e alterado para um permissionamento mais adequado ao projeto e a conta.
+
 Ao final da criação irá aparecer uma mensagem solicitando a escolha do tipo de arquivo que será criado com as informações da chave, por ser um projeto recente iremos com a recomendação da Google (JSON). Após o download da chave iremos referenciar a chave baixada no env do sistema operacional com um dos seguintes comandos:
+
 *Para linux ou MacOS*
-export GOOGLE_APPLICATION_CREDENTIALS="`KEY_PATH`"
+
+	export GOOGLE_APPLICATION_CREDENTIALS="`KEY_PATH`"
+
 *Para Windows com powershell*
-$env:GOOGLE_APPLICATION_CREDENTIALS="`KEY_PATH`"
+
+	$env:GOOGLE_APPLICATION_CREDENTIALS="`KEY_PATH`"
+
 Para windows com prompt de comando
-set GOOGLE_APPLICATION_CREDENTIALS=`KEY_PATH`
+
+	set GOOGLE_APPLICATION_CREDENTIALS=`KEY_PATH`
+
 **Substitua `KEY_PATH` pelo caminho do arquivo JSON que contém a chave da conta de serviço**.
 
 ### Projeto
